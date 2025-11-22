@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CosplayFinder</title>
+    <!-- On garde Tailwind en CDN pour la simplicité du design actuel -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Quicksand:wght@400;600;700&family=VT323&display=swap" rel="stylesheet">
     <script>
@@ -23,7 +24,7 @@
               geek: {
                 dark: '#0f0518',
                 panel: '#1a0b2e',
-                accent: '#00ff9d' // Cyberpunk green contrast
+                accent: '#00ff9d' 
               }
             },
             animation: {
@@ -57,11 +58,13 @@
   <script type="importmap">
 {
   "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4"
   }
 }
 </script>
@@ -69,6 +72,7 @@
 </head>
   <body>
     <div id="root"></div>
+    <!-- Vite a besoin de ce type="module" pour démarrer -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
